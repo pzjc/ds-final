@@ -334,14 +334,4 @@ def execute(dataset, trainingSection):
         csv.writer(f).writerows(predictions_human_readable)
 
 
-    # # Evaluation and Noise Reduction
-
-    # In[17]:
-
-
-    import ES_interface as esi
-
-    esi.metric(dataset + '_' + str(trainingSection), out_path)
-
-
 execute(str(sys.argv[1]), sys.argv[2])
